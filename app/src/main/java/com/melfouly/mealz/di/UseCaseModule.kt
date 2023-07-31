@@ -1,7 +1,7 @@
 package com.melfouly.mealz.di
 
 import com.melfouly.domain.repository.Repository
-import com.melfouly.domain.usecase.GetMealz
+import com.melfouly.domain.usecase.MainUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,7 +12,7 @@ import dagger.hilt.components.SingletonComponent
 object UseCaseModule {
 
     @Provides
-    fun provideUseCase(repository: Repository): GetMealz {
-        return GetMealz(repository)
+    fun provideUseCase(repository: Repository): MainUseCase {
+        return MainUseCase(repository)
     }
 }
