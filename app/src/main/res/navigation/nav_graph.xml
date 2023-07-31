@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.melfouly.mealz.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_modalBottomSheetFragment"
+            app:destination="@id/modalBottomSheetFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/modalBottomSheetFragment"
+        android:name="com.melfouly.mealz.ModalBottomSheetFragment"
+        android:label="ModalBottomSheetFragment" >
+        <argument
+            android:name="strCategory"
+            app:argType="string" />
+    </dialog>
+</navigation>
