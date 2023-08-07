@@ -26,6 +26,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "trial"
+
+    productFlavors {
+        iconic {
+            dimension "trial"
+            applicationId "com.melfouly.mealziconic"
+            versionCode 2
+        }
+    }
+
+    sourceSets {
+        iconic {
+            manifest.srcFile 'src/iconic/AndroidManifest.xml'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_18
         targetCompatibility JavaVersion.VERSION_18
@@ -49,7 +66,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'androidx.activity:activity-ktx:1.7.2'
-    implementation "androidx.fragment:fragment-ktx:1.5.7"
+    implementation "androidx.fragment:fragment-ktx:1.6.1"
 
     // Navigation Component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
